@@ -21,6 +21,15 @@ const allEvents = [
 		description: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.'
 	},
 	{
+		id: 'designing-for-people',
+		time: '1955',
+		name: 'Designing for people',
+		companies: [],
+		people: ['Henry Dreyfuss'],
+		labels: ['key-point'],
+		description: 'Henry Dreyfuss wrote a book called "Designing for people" in which he talked about his ideas related to the relationship between humans and machines, namely "fitting the machine to the man rather than the man to the machine"'
+	},
+	{
 		id: 'ibm-29-card-punch',
 		time: '1964-10-14',
 		name: 'IBM 29 card punch',
