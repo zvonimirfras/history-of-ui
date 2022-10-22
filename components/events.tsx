@@ -5,7 +5,7 @@ export const events = [
 		name: 'Colossus',
 		companies: ['General Post Office'],
 		labels: ['key-point'],
-		description: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.'
+		summary: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.'
 	},
 	{
 		id: 'eniac',
@@ -13,7 +13,7 @@ export const events = [
 		name: 'ENIAC',
 		companies: ['Eckert-Mauchly Computer Corporation'],
 		labels: ['key-point'],
-		description: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.'
+		summary: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.'
 	},
 	{
 		id: 'designing-for-people',
@@ -22,7 +22,7 @@ export const events = [
 		companies: [],
 		people: ['Henry Dreyfuss'],
 		labels: ['key-point'],
-		description: 'Henry Dreyfuss wrote a book called "Designing for people" in which he talked about his ideas related to the relationship between humans and machines, namely "fitting the machine to the man rather than the man to the machine"'
+		summary: 'Henry Dreyfuss wrote a book called "Designing for people" in which he talked about his ideas related to the relationship between humans and machines, namely "fitting the machine to the man rather than the man to the machine"'
 	},
 	{
 		id: 'ibm-29-card-punch',
@@ -30,7 +30,7 @@ export const events = [
 		name: 'IBM 29 card punch',
 		companies: ['IBM'],
 		labels: ['key-point'],
-		description: ''
+		summary: ''
 	},
 	{
 		id: 'nls',
@@ -38,7 +38,7 @@ export const events = [
 		name: 'oN-Line System (NLS)',
 		companies: ['SRI International'],
 		labels: ['key-point'],
-		description: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.'
+		summary: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.'
 	},
 	{
 		id: 'xerox-alto',
@@ -46,7 +46,7 @@ export const events = [
 		name: 'Xerox Alto',
 		companies: ['Xerox'],
 		labels: ['key-point', 'first-gui'],
-		description: 'First Graphical User Interface (GUI)'
+		summary: 'First Graphical User Interface (GUI)'
 	},
 	{
 		id: 'windows-1',
@@ -54,7 +54,7 @@ export const events = [
 		name: 'Windows 1.0',
 		companies: ['Microsoft'],
 		labels: ['key-point', 'operating-system'],
-		description: ''
+		summary: ''
 	},
 	{
 		id: 'psion-epoc',
@@ -62,7 +62,7 @@ export const events = [
 		name: 'Psion EPOC',
 		companies: ['Psion'],
 		labels: ['key-point', 'operating-system', 'mobile'],
-		description: 'Mobile operating system that supported apps.'
+		summary: 'Mobile operating system that supported apps.'
 	},
 	{
 		id: 'ibm-simon',
@@ -70,7 +70,7 @@ export const events = [
 		name: 'IBM Simon',
 		companies: ['IBM'],
 		labels: ['key-point', 'smartphone'],
-		description: 'The first smartphone. First to include phone and PDA features in one device. It had a touchscreen.'
+		summary: 'The first smartphone. First to include phone and PDA features in one device. It had a touchscreen.'
 	},
 	{
 		id: 'windows-95',
@@ -78,7 +78,7 @@ export const events = [
 		name: 'Windows 95',
 		companies: ['Microsoft'],
 		labels: ['key-point', 'operating-system'],
-		description: 'The most notable was the inclusion of the "START" button which is still present in Windows 10'
+		summary: 'The most notable was the inclusion of the "START" button which is still present in Windows 10'
 	},
 	{
 		id: 'apple-app-store',
@@ -86,7 +86,7 @@ export const events = [
 		name: 'Apple App Store',
 		companies: ['Apple'],
 		labels: ['key-point', 'app-store'],
-		description: ''
+		summary: ''
 	},
 	{
 		id: 'macintosh-system-1',
@@ -94,6 +94,6 @@ export const events = [
 		name: 'Macintosh "System 1"',
 		companies: ['Apple'],
 		labels: ['key-point', 'operating-system'],
-		description: 'Window based system with icons. First version of Apple Macintosh operating system and the beginning of the classic Mac OS series.'
+		summary: 'Window based system with icons. First version of Apple Macintosh operating system and the beginning of the classic Mac OS series.'
 	},
 ];
