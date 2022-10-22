@@ -7,10 +7,10 @@ const allEvents = [
 	{
 		id: 'colossus',
 		time: '1943-12',
-		name: 'ENIAC',
+		name: 'Colossus',
 		companies: ['General Post Office'],
 		labels: ['key-point'],
-		description: 'Colossus was a set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.'
+		description: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.'
 	},
 	{
 		id: 'eniac',
