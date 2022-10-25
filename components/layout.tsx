@@ -9,7 +9,10 @@ const Layout = ({ children }: any) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1 className='text-center text-3xl font-bold mt-10 mb-14'>History of user interfaces</h1>
+			<div className='ml-auto mr-auto w-fit mt-10 mb-14'>
+				<h1 className='text-3xl font-bold mb-1'>History of user interfaces</h1>
+				<p className='italic'>by <a href='https://www.zvonimirfras.com'>Zvonimir Fras</a></p>
+			</div>
 
 			<main>
 				{children}
