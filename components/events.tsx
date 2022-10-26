@@ -126,10 +126,10 @@ export const events = [
 	{
 		id: 'apple-newton',
 		time: '1993-08-03',
-		name: 'ThinkPad',
+		name: 'Apple Newton',
 		companies: ['IBM'],
 		labels: ['key-point', 'mobile'],
-		summary: 'First personal digital assistand (PDA) to feature handwriting recognition. Had inconsistent results.'
+		summary: 'First personal digital assistant (PDA) to feature handwriting recognition. Had inconsistent results.'
 	},
 	{
 		id: 'ibm-simon',
