@@ -34,11 +34,12 @@ export const events = [
 		summary: ''
 	},
 	{
-		id: 'nls',
+		id: 'nls-mother-of-all-demos',
 		time: '1968-12-09',
-		name: 'oN-Line System (NLS)',
+		name: 'oN-Line System (NLS) - Mother of All Demos',
 		companies: ['SRI International'],
-		labels: ['key-point'],
+		people: ['Douglas Engelbart'],
+		labels: ['key-point', 'first-mouse'],
 		summary: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.'
 	},
 	{
@@ -50,6 +51,48 @@ export const events = [
 		summary: 'First Graphical User Interface (GUI)'
 	},
 	{
+		id: 'xerox-apple-deal',
+		time: '1979',
+		name: 'Xerox and Apple make a deal',
+		companies: ['Xerox', 'Apple'],
+		labels: [],
+		summary: "Apple gave Xerox the opportunity to buy $1 million of Apple stock. (needs more info)"
+	},
+	{
+		id: 'ibm-pc',
+		time: '1981-08-12',
+		name: 'IBM Personal Computer',
+		companies: ['IBM'],
+		people: ['Don Estridge'],
+		labels: ['key-point', 'first-computer'],
+		summary: 'The first microcomputer released in the IBM PC model line and the basis for the IBM PC compatible de facto standard. IBM recruited Charlie Chaplin to advertise their more approachable side. The IBM PC revolutionized business computing by becoming the first PC to gain widespread adoption by industry.'
+	},
+	{
+		id: 'grid-compass',
+		time: '1982-04',
+		name: 'GRiD Compass - first laptop',
+		companies: ['GRiD Systems Corporation'],
+		people: ['Bill Moggridge'],
+		labels: ['key-point', 'first-laptop'],
+		summary: 'Development began in 1979. NASA used it on the Space Shuttle in early 1980s.'
+	},
+	{
+		id: 'compaq-portable',
+		time: '1983-03',
+		name: 'The Compaq Portable',
+		companies: ['Compaq'],
+		labels: ['key-point'],
+		summary: 'Portable computer that was like an IBM PC in a luggage form.'
+	},
+	{
+		id: 'macintosh',
+		time: '1984-01-24',
+		name: 'The Macintosh (OS System 1.0)',
+		companies: ['Apple'],
+		labels: ['key-point', 'operating-system'],
+		summary: 'Window based system with icons. First version of Apple Macintosh operating system and the beginning of the classic Mac OS series. Even though other personal computers came before it, Macintosh changed the way people thought about personal computers.'
+	},
+	{
 		id: 'windows-1',
 		time: '1985-11-20',
 		name: 'Windows 1.0',
@@ -58,12 +101,35 @@ export const events = [
 		summary: ''
 	},
 	{
+		id: 'eisa',
+		time: '1988',
+		name: 'EISA',
+		labels: ['key-point'],
+		summary: 'IBM got a lot of competition from IBM-compatible devices so they came up with Micro Channel architecture, their own copyrighted standard - no longer compatible with their older versions. It backfired. Nine leading competitors created their own standard called Extended Industry Standard Architecture (EISA). EISA was compatible with previous versions and easily available for companies to purchase.'
+	},
+	{
 		id: 'psion-epoc',
 		time: '1989',
 		name: 'Psion EPOC',
 		companies: ['Psion'],
 		labels: ['key-point', 'operating-system', 'mobile'],
 		summary: 'Mobile operating system that supported apps.'
+	},
+	{
+		id: 'thinkpad',
+		time: '1992-02',
+		name: 'ThinkPad',
+		companies: ['IBM'],
+		labels: ['key-point'],
+		summary: ''
+	},
+	{
+		id: 'apple-newton',
+		time: '1993-08-03',
+		name: 'ThinkPad',
+		companies: ['IBM'],
+		labels: ['key-point', 'mobile'],
+		summary: 'First personal digital assistand (PDA) to feature handwriting recognition. Had inconsistent results.'
 	},
 	{
 		id: 'ibm-simon',
@@ -88,13 +154,5 @@ export const events = [
 		companies: ['Apple'],
 		labels: ['key-point', 'app-store'],
 		summary: ''
-	},
-	{
-		id: 'macintosh-system-1',
-		time: '1984-01-24',
-		name: 'Macintosh "System 1"',
-		companies: ['Apple'],
-		labels: ['key-point', 'operating-system'],
-		summary: 'Window based system with icons. First version of Apple Macintosh operating system and the beginning of the classic Mac OS series.'
-	},
+	}
 ];
