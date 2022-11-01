@@ -6,7 +6,7 @@ const Layout = ({ children }: any) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
-		<div className='min-h-screen absolute top-0 w-full bg-slate-50'>
+		<div className='min-h-screen absolute top-0 w-full bg-slate-50 text-gray-800'>
 			<Head>
 				<title>History of UI</title>
 				<meta name='description' content='Important events in the history of user interfaces, with interactive timeline' />
