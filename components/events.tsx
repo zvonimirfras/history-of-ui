@@ -158,6 +158,14 @@ export const events = [
 		summary: 'The most notable was the inclusion of the "START" button which is still present in Windows 10'
 	},
 	{
+		id: 'imac-g3',
+		time: '1998-08-15',
+		name: 'iMac G3 - The first iMac',
+		companies: ['Apple'],
+		labels: ['key-point'],
+		summary: 'The iMac was drastically different from other existing mainstream computers. It was made with "nothing-to-hide" translucent plastic.'
+	},
+	{
 		id: 'apple-app-store',
 		time: '2008-07-10',
 		name: 'Apple App Store',
