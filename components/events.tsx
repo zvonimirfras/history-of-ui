@@ -140,6 +140,16 @@ export const events = [
 		summary: 'The first smartphone. First to include phone and PDA features in one device. It had a touchscreen.'
 	},
 	{
+		id: 'user-experience-architect',
+		time: '1995',
+		name: 'User Experience Architect',
+		companies: ['Apple'],
+		people: ['Don Norman'],
+		labels: ['key-point'],
+		// https://www.nngroup.com/articles/definition-user-experience/
+		summary: 'During his time at Apple, Don Norman created the first "User Experience Architect" poistion. "It\'s the way you experience the world, it\'s the way you experience your life, it\'s the way you experience service.'
+	},
+	{
 		id: 'windows-95',
 		time: '1995-08-24',
 		name: 'Windows 95',
