@@ -166,6 +166,14 @@ export const events = [
 		summary: 'The iMac was drastically different from other existing mainstream computers. It was made with "nothing-to-hide" translucent plastic.'
 	},
 	{
+		id: 'visualphone-vp210',
+		time: '1999-05',
+		name: 'Visualphone VP210',
+		companies: ['Kyocera Fineceramics'],
+		labels: ['key-point', 'mobile'],
+		summary: 'First phone with a front facing camera and the first mobile color videophone. It could send 2 photos per second via Japan\'s PHS network system'
+	},
+	{
 		id: 'apple-app-store',
 		time: '2008-07-10',
 		name: 'Apple App Store',
