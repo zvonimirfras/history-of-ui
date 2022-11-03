@@ -5,8 +5,8 @@ export const events = [
 		name: 'Colossus',
 		companies: ['General Post Office'],
 		labels: ['key-point'],
-		summary: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.',
-		description: 'Colossus was a set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.'
+		summary: <div className='flex'><img src='/images/Colossus-320px.jpg' alt='Two female code breakers working on the Colossus computers' className='mr-6' /><p className="inline-block">A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.</p></div>,
+		description: <><img src='/images/Colossus-640px.jpg' alt='Two female code breakers working on the Colossus computers' className='m-auto mb-6' />Colossus was a set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.</>
 	},
 	{
 		id: 'eniac',
