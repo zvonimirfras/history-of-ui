@@ -25,7 +25,7 @@ export const events = [
 		thumbnailAlt: 'ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory',
 		summary: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.',
 		description: <>
-			<Image src='/images/Eniac.jpg' alt='ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory' />
+			<Image src='/images/Eniac-628px.jpg' srcFull='/images/Eniac.jpg' alt='ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory' />
 			ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that
 			had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical
 			problems" through reprogramming.
