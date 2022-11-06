@@ -2,7 +2,6 @@ import { Search } from '@carbon/icons-react';
 import type { NextPage } from 'next';
 import { EventTile } from '../components/event-tile';
 import { events } from '../components/events';
-import Layout from '../components/layout';
 
 const Home: NextPage = () => {
 	return (<>
