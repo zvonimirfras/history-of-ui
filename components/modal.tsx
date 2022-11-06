@@ -10,7 +10,7 @@ export const Modal = ({isModalOpen, setIsModalOpen, children}: any) => {
 
 		<div className='fixed inset-0 overflow-y-auto'>
 			<div className='flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0'>
-				<div className='relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all w-[calc(100vw-4rem)]  max-w-3xl h-[calc(100vh-4rem)]'>
+				<div className='relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]'>
 					<button
 					onClick={() => setIsModalOpen(false)}
 					className='absolute right-0 top-0 p-2 bg-white'>

@@ -30,11 +30,13 @@ const Layout = ({ children }: any) => {
 			</button>
 
 			<Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-				<iframe
-				className='w-[calc(100vw-7rem)] h-[calc(100vh-7rem)]  max-w-full'
-				src='https://docs.google.com/forms/d/e/1FAIpQLSffPwmzEMwPRB9jMPzKYbN-doJ__YHRf7C1FBwHcnVZwmnwqg/viewform?embedded=true'>
-					Loading…
-				</iframe>
+				<div className='max-w-3xl'>
+					<iframe
+					className='w-[100vw] h-[calc(100vh-6rem)]  max-w-full'
+					src='https://docs.google.com/forms/d/e/1FAIpQLSffPwmzEMwPRB9jMPzKYbN-doJ__YHRf7C1FBwHcnVZwmnwqg/viewform?embedded=true'>
+						Loading…
+					</iframe>
+				</div>
 			</Modal>
 
 			<footer>
