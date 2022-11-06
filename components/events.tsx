@@ -1,3 +1,5 @@
+import { Image } from "./image";
+
 export const events = [
 	{
 		id: 'colossus',
@@ -8,7 +10,7 @@ export const events = [
 		thumbnail: '/images/Colossus-320px.jpg',
 		thumbnailAlt: 'Two female code breakers working on the Colossus computers',
 		summary: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.',
-		description: <><img src='/images/Colossus-640px.jpg' alt='Two female code breakers working on the Colossus computers' className='m-auto mb-6' />Colossus was a set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.</>
+		description: <><Image src='/images/Colossus-640px.jpg' alt='Two female code breakers working on the Colossus computers' className='m-auto mb-6' />Colossus was a set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.</>
 	},
 	{
 		id: 'eniac',
@@ -19,7 +21,7 @@ export const events = [
 		thumbnail: '/images/Eniac-314px.jpg',
 		thumbnailAlt: 'ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory',
 		summary: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.',
-		description: <><img src='/images/Eniac.jpg' alt='ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory' className='m-auto mb-6' />ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.</>
+		description: <><Image src='/images/Eniac.jpg' alt='ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory' className='m-auto mb-6' />ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.</>
 	},
 	{
 		id: 'designing-for-people',
