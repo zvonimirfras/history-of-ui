@@ -13,7 +13,7 @@ export const Image = ({ src, srcFull, alt, className }: any) => {
 			onClick={() => setIsModalOpen(true)} />;
 
 		<Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-			<img src={srcFull || src} />
+			<img src={srcFull || src} className='max-h-[calc(100vh-9rem)]' />
 			{
 				alt
 				&& <div className='mt-3 text-center'>{alt}</div>
