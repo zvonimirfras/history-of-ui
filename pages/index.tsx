@@ -1,9 +1,24 @@
 import { Search } from '@carbon/icons-react';
 import type { NextPage } from 'next';
+import { useEffect } from 'react';
 import { EventTile } from '../components/event-tile';
 import { events } from '../components/events';
 
 const Home: NextPage = () => {
+	// decode fresh page load on github pages (from 404.html)
+	useEffect(() => {
+		const l = window.location;
+
+		if (l.hostname !== 'historyofui.com' && l.hostname !== 'www.historyofui.com') {
+			// we're not on github pages so we don't do the github pages hack
+			return;
+		}
+		if (l.search[1] === '/') {
+			const decoded = l.search.slice(1).split('&').map((s) => s.replace(/~and~/g, '&')).join('?');
+			window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash);
+		}
+	}, []);
+
 	return (<>
 		{/* <label htmlFor='default-search' className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300'>Search</label>
 		<div className='relative'>
