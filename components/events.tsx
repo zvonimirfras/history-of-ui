@@ -46,7 +46,13 @@ export const events = [
 		name: 'IBM 29 card punch',
 		companies: ['IBM'],
 		labels: ['key-point'],
-		summary: ''
+		thumbnail: '/images/IBM_card_punch_machine_29-320px.jpg',
+		thumbnailAlt: 'IBM 029 card punch machine in 2016 at Instituut voor Nederlandse Lexicologie (Leiden, the Netherlands)',
+		summary: 'The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in punched cards. The cards were then read and processed by a computer or an accounting machine.',
+		description: <>
+			<Image src='/images/IBM_card_punch_machine_29-640px.jpg' srcFull='/images/IBM_card_punch_machine_29.jpg' alt='IBM 029 card punch machine in 2016 at Instituut voor Nederlandse Lexicologie (Leiden, the Netherlands)' />
+			The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in punched cards. The cards were then read and processed by a computer or an accounting machine.
+		</>
 	},
 	{
 		id: 'nls-mother-of-all-demos',
