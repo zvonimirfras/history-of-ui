@@ -51,7 +51,8 @@ export const events = [
 		summary: 'The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in punched cards. The cards were then read and processed by a computer or an accounting machine.',
 		description: <>
 			<Image src='/images/IBM_card_punch_machine_29-640px.jpg' srcFull='/images/IBM_card_punch_machine_29.jpg' alt='IBM 029 card punch machine in 2016 at Instituut voor Nederlandse Lexicologie (Leiden, the Netherlands)' />
-			The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in punched cards. The cards were then read and processed by a computer or an accounting machine.
+			The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in
+			punched cards. The cards were then read and processed by a computer or an accounting machine.
 		</>
 	},
 	{
@@ -59,9 +60,17 @@ export const events = [
 		time: '1968-12-09',
 		name: 'oN-Line System (NLS) - Mother of All Demos',
 		companies: ['SRI International'],
-		people: ['Douglas Engelbart'],
+		people: ['Douglas Engelbart', 'Bill English'],
 		labels: ['key-point', 'first-mouse'],
-		summary: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.'
+		thumbnail: '/images/SRI_Bill_English_1968-320px.jpg',
+		summary: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.',
+		description: <>
+			<Image src='/images/SRI_Bill_English_1968.jpg' alt='SRI’s Bill English, engineer who built the first computer mouse prototype, prepares for the December 9, 1968 "mother of all demos"' />
+			Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by
+			researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the
+			first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by
+			relevance, screen windowing, presentation programs, and other modern computing concepts.
+		</>
 	},
 	{
 		id: 'xerox-alto',
