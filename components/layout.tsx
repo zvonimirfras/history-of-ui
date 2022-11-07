@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { RequestQuote } from '@carbon/icons-react';
 import { useState } from 'react';
 import { Modal } from './modal';
+import Link from 'next/link';
 
 const Layout = ({ children }: any) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +16,7 @@ const Layout = ({ children }: any) => {
 			</Head>
 
 			<div className='ml-auto mr-auto w-fit mt-10 mb-14'>
-				<h1 className='text-3xl font-bold mb-1'>History of user interfaces</h1>
+				<h1 className='text-3xl font-bold mb-1'><Link href='/'>History of user interfaces</Link></h1>
 				<p className='italic'>by <a href='https://www.zvonimirfras.com'>Zvonimir Fras</a></p>
 			</div>
 
