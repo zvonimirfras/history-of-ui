@@ -1,10 +1,13 @@
 import { Search } from '@carbon/icons-react';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { EventTile } from '../components/event-tile';
 import { events } from '../components/events';
 
 const Home: NextPage = () => {
+	const router = useRouter();
+
 	// decode fresh page load on github pages (from 404.html)
 	useEffect(() => {
 		const l = window.location;
@@ -14,8 +17,8 @@ const Home: NextPage = () => {
 			return;
 		}
 		if (l.search[1] === '/') {
-			const decoded = l.search.slice(1).split('&').map((s) => s.replace(/~and~/g, '&')).join('?');
-			window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash);
+			const decoded = l.search.slice(1).split('&').map((s) => s.replace(/~and~/g, '&')).join('/');
+			router.push(decoded)
 		}
 	}, []);
 
