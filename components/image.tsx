@@ -10,7 +10,7 @@ export const Image = ({ src, srcFull, alt, className }: any) => {
 			alt={alt}
 			tabIndex={0}
 			className={`m-auto mb-6 cursor-pointer ${className}`}
-			onClick={() => setIsModalOpen(true)} />;
+			onClick={() => setIsModalOpen(true)} />
 
 		<Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
 			<img src={srcFull || src} className='max-h-[calc(100vh-9rem)]' />
