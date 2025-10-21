@@ -40,8 +40,29 @@ const Layout = ({ children }: any) => {
 				</div>
 			</Modal>
 
-			<footer>
-
+			{/* Footer */}
+			<footer className='relative bg-slate-900 text-slate-300 py-16 mt-32 border-t border-slate-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center'>
+						<div className='font-["Fraunces"] text-2xl font-semibold text-slate-100 mb-3'>
+							The Journey Continues
+						</div>
+						<p className='text-slate-400 mb-8 max-w-2xl mx-auto text-sm leading-relaxed'>
+							From mechanical calculators to neural interfaces, the evolution of human-computer interaction<br className='hidden md:block' />
+							is an ongoing story of innovation, creativity, and human ingenuity.
+						</p>
+						<div className='flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 mb-6'>
+							<span>© 2024 History of UI</span>
+							<span className='w-1 h-1 bg-slate-600 rounded-full'></span>
+							<a href='https://github.com/zvonimirfras/history-of-ui' className='hover:text-amber-500 transition-colors'>Contribute</a>
+							<span className='w-1 h-1 bg-slate-600 rounded-full'></span>
+							<a href='https://www.zvonimirfras.com' className='hover:text-amber-500 transition-colors'>Contact</a>
+						</div>
+						<div className='text-xs text-slate-600'>
+							Images courtesy of public domain and historical archives
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
 	);
