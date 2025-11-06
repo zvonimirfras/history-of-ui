@@ -119,12 +119,10 @@ const Event = () => {
 						</div>
 					)}
 
-					{/* Main Content */}
-					<div className='prose prose-lg max-w-none'>
-						<div className='text-slate-700 leading-relaxed text-lg'>
-							{event.description || event.summary}
-						</div>
-					</div>
+				{/* Main Content */}
+				<div className='event-description'>
+					{event.description || event.summary}
+				</div>
 
 					{/* Labels */}
 					{event.labels.length > 0 && (
