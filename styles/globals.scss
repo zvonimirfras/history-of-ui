@@ -58,6 +58,104 @@ a {
 	animation: fadeInUp 0.6s ease-out;
 }
 
+/* Event Description Styling */
+.event-description {
+	h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #1e293b;
+		margin-top: 1.75rem;
+		margin-bottom: 0.875rem;
+		letter-spacing: -0.015em;
+		line-height: 1.4;
+
+		&:first-of-type {
+			margin-top: 1.25rem;
+		}
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.75;
+		color: #334155;
+		margin-bottom: 1.25rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		font-weight: 600;
+		color: #0f172a;
+	}
+
+	ul {
+		margin: 1rem 0 1.5rem 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	li {
+		font-size: 1rem;
+		line-height: 1.75;
+		color: #334155;
+		margin-bottom: 0.75rem;
+		padding-left: 1.75rem;
+		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: '→';
+			position: absolute;
+			left: 0;
+			color: #d97706;
+			font-weight: 600;
+			font-size: 1.1rem;
+		}
+
+		strong {
+			color: #0f172a;
+			font-weight: 600;
+		}
+	}
+
+	/* Better spacing for content blocks */
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	/* Image styling */
+	img {
+		margin-bottom: 1.5rem;
+	}
+
+	/* Link styling */
+	a {
+		color: #d97706;
+		text-decoration: underline;
+		text-decoration-color: #fbbf24;
+		text-underline-offset: 3px;
+		transition: all 0.2s ease-in-out;
+		font-weight: 500;
+
+		&:hover {
+			color: #b45309;
+			text-decoration-color: #f59e0b;
+			text-underline-offset: 2px;
+		}
+
+		&:focus {
+			outline: 2px solid #f59e0b;
+			outline-offset: 2px;
+			border-radius: 2px;
+		}
+	}
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
 	html {
@@ -68,5 +166,22 @@ a {
 		-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
 	}
-}
 
+	.event-description {
+		h3 {
+			font-size: 1.125rem;
+			margin-top: 1.5rem;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			font-size: 0.9375rem;
+			line-height: 1.7;
+		}
+
+		li {
+			font-size: 0.9375rem;
+			padding-left: 1.5rem;
+		}
+	}
+}
