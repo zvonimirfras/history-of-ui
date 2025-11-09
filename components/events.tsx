@@ -1,9 +1,11 @@
-import { Image } from "./image";
-import Link from 'next/link';
+import { Image } from './image';
 
 import type { ReactNode } from 'react';
 
-export type Label = 'key-point' | 'first-gui' | 'first-mouse' | 'first-computer' | 'first-laptop' | 'operating-system' | 'mobile' | 'web' | 'browser' | 'smartphone' | 'pda' | 'app-store' | 'tablet' | 'touchscreen' | 'flat-design' | 'design-system' | 'spatial-computing';
+export type Label = 'key-point' | 'first-gui' | 'first-mouse' | 'first-computer' |
+'first-laptop' | 'operating-system' | 'mobile' | 'web' | 'browser' | 'smartphone' |
+'pda' | 'app-store' | 'tablet' | 'touchscreen' | 'flat-design' | 'design-system' |
+'spatial-computing';
 
 export interface Event {
 	id: string;
@@ -27,20 +29,25 @@ export const events: Event[] = [
 		labels: ['key-point'],
 		thumbnail: '/images/Colossus-320px.jpg',
 		thumbnailAlt: 'Two female code breakers working on the Colossus computers',
+		// eslint-disable-next-line max-len
 		summary: 'A set of computers developed by British codebreakers in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher.',
 		description: <>
-			<Image src='/images/Colossus-640px.jpg' srcFull='/images/Colossus.jpg'  alt='Two female code breakers working on the Colossus computers' />
+			<Image src='/images/Colossus-640px.jpg' srcFull='/images/Colossus.jpg' alt='Two female code breakers working on the Colossus computers' />
 
+			{/* eslint-disable-next-line max-len */}
 			<p>Colossus was a set of computers developed by British codebreakers at <strong>Bletchley Park</strong> in the years 1943-1945 to help in the cryptanalysis of the Lorenz cipher used by the German High Command during World War II.</p>
 
 			<h3>Revolutionary Technology</h3>
+			{/* eslint-disable-next-line max-len */}
 			<p>Colossus was the first programmable electronic computer, though not general-purpose. It used 1,500-1,600 vacuum tubes, making it incredibly fast for its time. It could process 5,000 characters per second. An optical tape reader could read paper tape at high speed, feeding encrypted messages into the machine for analysis. These specifications sound modest now, but in 1943, they represented the cutting edge of what was technologically possible.</p>
 
 			<h3>Interface & Operation</h3>
-			<p>While primitive by modern standards, Colossus had a control panel with switches and dials that operators (mostly women) used to set the machine's parameters. The output was displayed on a typewriter and indicator lamps. This represented an early form of human-computer interaction, where operators needed to understand both the mathematics and the machine's operation. Programming Colossus meant understanding cryptanalysis, mathematics, and the machine's physical operation. It was a demanding combination.</p>
+			{/* eslint-disable-next-line max-len */}
+			<p>While primitive by modern standards, Colossus had a control panel with switches and dials that operators (mostly women) used to set the machine&apos;s parameters. The output was displayed on a typewriter and indicator lamps. This represented an early form of human-computer interaction, where operators needed to understand both the mathematics and the machine&apos;s operation. Programming Colossus meant understanding cryptanalysis, mathematics, and the machine&apos;s physical operation. It was a demanding combination.</p>
 
 			<h3>Historical Impact</h3>
-			<p>Colossus remained classified until the 1970s, so its influence on computer development was indirect. However, many of the engineers who worked on Colossus went on to build later computers, carrying forward their knowledge of electronic computing. Ten Colossus machines were built, significantly shortening WWII and saving countless lives. The machines were so secret that most were destroyed after the war, and their existence wasn't publicly acknowledged for decades.</p>
+			{/* eslint-disable-next-line max-len */}
+			<p>Colossus remained classified until the 1970s, so its influence on computer development was indirect. However, many of the engineers who worked on Colossus went on to build later computers, carrying forward their knowledge of electronic computing. Ten Colossus machines were built, significantly shortening WWII and saving countless lives. The machines were so secret that most were destroyed after the war, and their existence wasn&apos;t publicly acknowledged for decades.</p>
 		</>
 	},
 	{
@@ -50,13 +57,18 @@ export const events: Event[] = [
 		companies: ['Eckert-Mauchly Computer Corporation'],
 		labels: ['key-point'],
 		thumbnail: '/images/Eniac-314px.jpg',
+		// eslint-disable-next-line max-len
 		thumbnailAlt: 'ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory',
+		// eslint-disable-next-line max-len
 		summary: 'ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.',
 		description: <>
+			{/* eslint-disable-next-line max-len */}
 			<Image src='/images/Eniac-628px.jpg' srcFull='/images/Eniac.jpg' alt='ENIAC in Philadelphia, Pennsylvania. Glen Beck (background) and Betty Snyder (foreground) program the ENIAC in building 328 at the Ballistic Research Laboratory' />
+			{/* eslint-disable-next-line max-len */}
 			ENIAC was the first programmable, electronic, general-purpose digital computer, completed in 1945. There were other computers that
-			had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve "a large class of numerical
-			problems" through reprogramming.
+			{/* eslint-disable-next-line max-len */}
+			had these features, but the ENIAC had all of them in one package. It was Turing-complete and able to solve &quot;a large class of numerical
+			problems&quot; through reprogramming.
 		</>
 	},
 	{
@@ -66,6 +78,7 @@ export const events: Event[] = [
 		companies: [],
 		people: ['Henry Dreyfuss'],
 		labels: ['key-point'],
+		// eslint-disable-next-line max-len
 		summary: 'Henry Dreyfuss wrote a book called "Designing for people" in which he talked about his ideas related to the relationship between humans and machines, namely "fitting the machine to the man rather than the man to the machine"'
 	},
 	{
@@ -76,8 +89,10 @@ export const events: Event[] = [
 		labels: ['key-point'],
 		thumbnail: '/images/IBM_card_punch_machine_29-320px.jpg',
 		thumbnailAlt: 'IBM 029 card punch machine in 2016 at Instituut voor Nederlandse Lexicologie (Leiden, the Netherlands)',
+		// eslint-disable-next-line max-len
 		summary: 'The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in punched cards. The cards were then read and processed by a computer or an accounting machine.',
 		description: <>
+			{/* eslint-disable-next-line max-len */}
 			<Image src='/images/IBM_card_punch_machine_29-640px.jpg' srcFull='/images/IBM_card_punch_machine_29.jpg' alt='IBM 029 card punch machine in 2016 at Instituut voor Nederlandse Lexicologie (Leiden, the Netherlands)' />
 			The IBM 29 card punch and its companion, the IBM 59 card verifier, were used to record and check information in
 			punched cards. The cards were then read and processed by a computer or an accounting machine.
@@ -91,8 +106,10 @@ export const events: Event[] = [
 		people: ['Douglas Engelbart', 'Bill English'],
 		labels: ['key-point', 'first-mouse'],
 		thumbnail: '/images/SRI_Bill_English_1968-320px.jpg',
+		// eslint-disable-next-line max-len
 		summary: 'Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the first to employ the practical use of hypertext links, the mouse, raster-scan video monitors, information organized by relevance, screen windowing, presentation programs, and other modern computing concepts.',
 		description: <>
+			{/* eslint-disable-next-line max-len */}
 			<Image src='/images/SRI_Bill_English_1968.jpg' alt='SRI’s Bill English, engineer who built the first computer mouse prototype, prepares for the December 9, 1968 "mother of all demos"' />
 			Revolutionary computer collaboration system developed in the 1960s. Designed by Douglas Engelbart and implemented by
 			researchers at the Augmentation Research Center (ARC) at the Stanford Research Institute (SRI), the NLS system was the
@@ -114,7 +131,7 @@ export const events: Event[] = [
 		name: 'Xerox and Apple make a deal',
 		companies: ['Xerox', 'Apple'],
 		labels: [],
-		summary: "Apple gave Xerox the opportunity to buy $1 million of Apple stock. (needs more info)"
+		summary: 'Apple gave Xerox the opportunity to buy $1 million of Apple stock. (needs more info)'
 	},
 	{
 		id: 'ibm-pc',
@@ -123,6 +140,7 @@ export const events: Event[] = [
 		companies: ['IBM'],
 		people: ['Don Estridge'],
 		labels: ['key-point', 'first-computer'],
+		// eslint-disable-next-line max-len
 		summary: 'The first microcomputer released in the IBM PC model line and the basis for the IBM PC compatible de facto standard. IBM recruited Charlie Chaplin to advertise their more approachable side. The IBM PC revolutionized business computing by becoming the first PC to gain widespread adoption by industry.'
 	},
 	{
@@ -148,6 +166,7 @@ export const events: Event[] = [
 		name: 'The Macintosh (OS System 1.0)',
 		companies: ['Apple'],
 		labels: ['key-point', 'operating-system'],
+		// eslint-disable-next-line max-len
 		summary: 'Window based system with icons. First version of Apple Macintosh operating system and the beginning of the classic Mac OS series. Even though other personal computers came before it, Macintosh changed the way people thought about personal computers.'
 	},
 	{
@@ -163,6 +182,7 @@ export const events: Event[] = [
 		time: '1988',
 		name: 'EISA',
 		labels: ['key-point'],
+		// eslint-disable-next-line max-len
 		summary: 'IBM got a lot of competition from IBM-compatible devices so they came up with Micro Channel architecture, their own copyrighted standard - no longer compatible with their older versions. It backfired. Nine leading competitors created their own standard called Extended Industry Standard Architecture (EISA). EISA was compatible with previous versions and easily available for companies to purchase.'
 	},
 	{
@@ -205,6 +225,7 @@ export const events: Event[] = [
 		people: ['Don Norman'],
 		labels: ['key-point'],
 		// https://www.nngroup.com/articles/definition-user-experience/
+		// eslint-disable-next-line max-len
 		summary: 'During his time at Apple, Don Norman created the first "User Experience Architect" poistion. "It\'s the way you experience the world, it\'s the way you experience your life, it\'s the way you experience service.'
 	},
 	{
@@ -221,6 +242,7 @@ export const events: Event[] = [
 		name: 'iMac G3 - The first iMac',
 		companies: ['Apple'],
 		labels: ['key-point'],
+		// eslint-disable-next-line max-len
 		summary: 'The iMac was drastically different from other existing mainstream computers. It was made with "nothing-to-hide" translucent plastic.'
 	},
 	{
@@ -229,6 +251,7 @@ export const events: Event[] = [
 		name: 'Visualphone VP210',
 		companies: ['Kyocera Fineceramics'],
 		labels: ['key-point', 'mobile'],
+		// eslint-disable-next-line max-len
 		summary: 'First phone with a front facing camera and the first mobile color videophone. It could send 2 photos per second via Japan\'s PHS network system'
 	},
 	{

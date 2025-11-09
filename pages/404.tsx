@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function FourOhFour() {
 	// encod page load on github pages
@@ -22,7 +22,7 @@ export default function FourOhFour() {
 		// https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
 		// Otherwise, leave pathSegmentsToKeep as 0.
 		const l = window.location;
-		let pathSegmentsToKeep = 0;
+		const pathSegmentsToKeep = 0;
 
 		if (l.hostname !== 'historyofui.com' && l.hostname !== 'www.historyofui.com') {
 			// we're not on github pages so we don't do the github pages hack
@@ -36,4 +36,4 @@ export default function FourOhFour() {
 			l.hash
 		);
 	}, []);
-};
+}

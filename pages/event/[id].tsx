@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { ArrowLeft } from "@carbon/icons-react";
-import { events } from "../../components/events";
-import { prettyDate } from "../../tools";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { ArrowLeft } from '@carbon/icons-react';
+import { events } from '../../components/events';
+import { prettyDate } from '../../tools';
 
 // Badge configuration for hero section - only show high priority badges here
 const HERO_BADGE_CONFIG: Record<string, { text: string; className: string; icon?: string }> = {
@@ -25,9 +25,10 @@ const Event = () => {
 				<div className='text-center'>
 					<div className='bg-amber-50 border border-amber-200 rounded-2xl p-8'>
 						<h1 className='font-["Fraunces"] text-2xl font-bold text-amber-900 mb-4'>Event Not Found</h1>
-						<p className='text-slate-600 mb-6'>We couldn't find the event you're looking for.</p>
+						<p className='text-slate-600 mb-6'>We couldn&apos;t find the event you&apos;re looking for.</p>
 						<Link href='/'>
-							<a className='inline-flex items-center px-6 py-3 bg-gradient-to-br from-amber-600 to-orange-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium'>
+							<a className={`inline-flex items-center px-6 py-3 bg-gradient-to-br from-amber-600 
+								to-orange-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium`}>
 								<ArrowLeft className='w-5 h-5 mr-2' />
 								Back to Timeline
 							</a>
@@ -87,16 +88,24 @@ const Event = () => {
 				{/* Content Section */}
 				<div className='p-8 lg:p-10'>
 					{/* Companies and People */}
-					{((event.companies && event.companies.length > 0) || (event.people && event.people.length > 0)) && (
+					{((event.companies && event.companies.length > 0) ||
+						(event.people && event.people.length > 0)) && (
 						<div className='mb-10 p-6 bg-slate-50 rounded-xl border border-slate-100'>
-							<h3 className='font-["Fraunces"] text-lg font-semibold text-slate-900 mb-5'>Key Players</h3>
+							<h3 className='font-["Fraunces"] text-lg font-semibold text-slate-900 mb-5'>
+								Key Players
+							</h3>
 							<div className='grid md:grid-cols-2 gap-6'>
 								{event.companies && event.companies.length > 0 && (
 									<div>
-										<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3'>Companies</h4>
+										<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3'>
+											Companies
+										</h4>
 										<div className='flex flex-wrap gap-2'>
 											{event.companies.map((company: string, index: number) => (
-												<span key={index} className='px-3 py-2 bg-white text-slate-800 text-sm rounded-lg font-medium border border-slate-200'>
+												<span
+													key={index}
+													className={`px-3 py-2 bg-white text-slate-800 text-sm rounded-lg 
+														font-medium border border-slate-200`}>
 													{company}
 												</span>
 											))}
@@ -105,10 +114,15 @@ const Event = () => {
 								)}
 								{event.people && event.people.length > 0 && (
 									<div>
-										<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3'>Key People</h4>
+										<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3'>
+											Key People
+										</h4>
 										<div className='flex flex-wrap gap-2'>
 											{event.people.map((person: string, index: number) => (
-												<span key={index} className='px-3 py-2 bg-amber-50 text-amber-900 text-sm rounded-lg font-medium border border-amber-200'>
+												<span
+													key={index}
+													className={`px-3 py-2 bg-amber-50 text-amber-900 text-sm rounded-lg 
+														font-medium border border-amber-200`}>
 													{person}
 												</span>
 											))}
@@ -119,18 +133,23 @@ const Event = () => {
 						</div>
 					)}
 
-				{/* Main Content */}
-				<div className='event-description'>
-					{event.description || event.summary}
-				</div>
+					{/* Main Content */}
+					<div className='event-description'>
+						{event.description || event.summary}
+					</div>
 
 					{/* Labels */}
 					{event.labels.length > 0 && (
 						<div className='mt-10 pt-8 border-t border-slate-200'>
-							<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4'>Categories</h4>
+							<h4 className='text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4'>
+								Categories
+							</h4>
 							<div className='flex flex-wrap gap-2'>
 								{event.labels.map((label: string, index: number) => (
-									<span key={index} className='px-4 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg font-medium border border-slate-200'>
+									<span
+										key={index}
+										className={`px-4 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg 
+											font-medium border border-slate-200`}>
 										{label.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
 									</span>
 								))}
