@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { prettyDate } from "../tools";
+import Link from 'next/link';
+import { prettyDate } from '../tools';
 
 /**
  * Badge configuration for different label types
@@ -60,9 +60,12 @@ export const EventTile = ({ event, side='left' }: any) => {
 		.slice(0, 3); // Show max 3 badges
 	return <Link href={`event/${event.id}`}>
 		<a className='group block'>
-			<div className='bg-white/95 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden border border-slate-200 hover:border-amber-400/50 hover:-translate-y-2 relative'>
+			<div className={`bg-white/95 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl 
+				transition-all duration-500 overflow-hidden border border-slate-200 
+				hover:border-amber-400/50 hover:-translate-y-2 relative`}>
 				{/* Subtle gradient overlay on hover */}
-				<div className='absolute inset-0 bg-gradient-to-br from-amber-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+				<div className={`absolute inset-0 bg-gradient-to-br from-amber-50/30 to-transparent 
+					opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
 				{/* Card Header */}
 				<div className='relative bg-gradient-to-r from-slate-50 to-amber-50/30 px-6 py-4 border-b border-slate-100'>
@@ -92,7 +95,8 @@ export const EventTile = ({ event, side='left' }: any) => {
 
 				{/* Card Content */}
 				<div className='relative p-6 lg:p-7'>
-					<h3 className='font-["Fraunces"] text-2xl font-bold text-slate-900 mb-5 group-hover:text-amber-900 transition-colors duration-300 leading-snug'>
+					<h3 className={`font-["Fraunces"] text-2xl font-bold text-slate-900 mb-5 
+						group-hover:text-amber-900 transition-colors duration-300 leading-snug`}>
 						{event.name}
 					</h3>
 
@@ -101,14 +105,19 @@ export const EventTile = ({ event, side='left' }: any) => {
 						{/* Mobile image - full width */}
 						{event.thumbnail && (
 							<div className='lg:hidden mb-6'>
-								<div className='relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500'>
+								<div className={`relative overflow-hidden rounded-2xl shadow-2xl 
+									group-hover:shadow-3xl transition-all duration-500`}>
+									{/* eslint-disable-next-line @next/next/no-img-element */}
 									<img
 										src={event.thumbnail}
 										alt={event.thumbnailAlt}
-										className='w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700'
+										className={`w-full h-48 object-cover group-hover:scale-110 
+											transition-transform duration-700`}
 									/>
-									<div className='absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
-									<div className='absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+									<div className={`absolute inset-0 bg-gradient-to-t from-black/30 via-transparent 
+										to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+									<div className={`absolute bottom-4 left-4 right-4 text-white opacity-0 
+										group-hover:opacity-100 transition-opacity duration-500`}>
 										<div className='text-xs font-semibold bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2'>
 											{event.thumbnailAlt}
 										</div>
@@ -119,12 +128,17 @@ export const EventTile = ({ event, side='left' }: any) => {
 
 						{/* Desktop: Image floated, text wraps around */}
 						{event.thumbnail && (
-							<div className={`hidden lg:block ${side === 'left' ? 'float-right ml-5 mb-4' : 'float-left mr-5 mb-4'} w-44`}>
-								<div className='relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-500 border border-slate-200'>
+							<div className={`hidden lg:block ${
+								side === 'left' ? 'float-right ml-5 mb-4' : 'float-left mr-5 mb-4'
+							} w-44`}>
+								<div className={`relative overflow-hidden rounded-xl shadow-lg 
+									group-hover:shadow-xl transition-all duration-500 border border-slate-200`}>
+									{/* eslint-disable-next-line @next/next/no-img-element */}
 									<img
 										src={event.thumbnail}
 										alt={event.thumbnailAlt}
-										className='w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500'
+										className={`w-full h-44 object-cover group-hover:scale-105 
+											transition-transform duration-500`}
 									/>
 									<div className='absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent'></div>
 								</div>
@@ -147,7 +161,11 @@ export const EventTile = ({ event, side='left' }: any) => {
 											</h4>
 											<div className='flex flex-wrap gap-2'>
 												{event.companies.map((company: string, index: number) => (
-													<span key={index} className='px-3 py-1.5 bg-slate-100 text-slate-800 text-xs rounded-lg font-medium border border-slate-200 hover:bg-slate-200 transition-colors duration-200'>
+													<span
+														key={index}
+														className={`px-3 py-1.5 bg-slate-100 text-slate-800 text-xs rounded-lg 
+															font-medium border border-slate-200 hover:bg-slate-200 
+															transition-colors duration-200`}>
 														{company}
 													</span>
 												))}
@@ -161,7 +179,11 @@ export const EventTile = ({ event, side='left' }: any) => {
 											</h4>
 											<div className='flex flex-wrap gap-2'>
 												{event.people.map((person: string, index: number) => (
-													<span key={index} className='px-3 py-1.5 bg-amber-50 text-amber-900 text-xs rounded-lg font-medium border border-amber-200 hover:bg-amber-100 transition-colors duration-200'>
+													<span
+														key={index}
+														className={`px-3 py-1.5 bg-amber-50 text-amber-900 text-xs rounded-lg 
+															font-medium border border-amber-200 hover:bg-amber-100 
+															transition-colors duration-200`}>
 														{person}
 													</span>
 												))}
@@ -179,7 +201,9 @@ export const EventTile = ({ event, side='left' }: any) => {
 					<div className='flex items-center justify-between'>
 						<span className='text-xs text-slate-500 font-medium'>Read full story</span>
 						<div className='flex items-center space-x-2'>
-							<div className='w-7 h-7 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300 shadow-sm'>
+							<div className={`w-7 h-7 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full 
+								flex items-center justify-center transform group-hover:translate-x-1 
+								group-hover:scale-110 transition-all duration-300 shadow-sm`}>
 								<svg className='w-3.5 h-3.5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M9 5l7 7-7 7' />
 								</svg>
