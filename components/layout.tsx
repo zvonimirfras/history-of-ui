@@ -1,10 +1,10 @@
-import Head from 'next/head';
 import { RequestQuote } from '@carbon/icons-react';
 import { useState } from 'react';
 import { Modal } from './modal';
 import Link from 'next/link';
 import { events } from './events';
 import Analytics from './analytics';
+import { Seo } from './seo';
 
 const Layout = ({ children }: any) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,11 +16,7 @@ const Layout = ({ children }: any) => {
 
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-amber-50/30 via-stone-50 to-slate-50 text-slate-900 relative overflow-x-hidden'>
-			<Head>
-				<title>History of UI</title>
-				<meta name='description' content='Important events in the history of user interfaces, with interactive timeline' />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			<Seo />
 
 			{/* Subtle Background Pattern */}
 			<div className='fixed inset-0 overflow-hidden pointer-events-none opacity-30'>

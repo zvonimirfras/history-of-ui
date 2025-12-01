@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft } from '@carbon/icons-react';
 import { events } from '../../components/events';
 import { prettyDate } from '../../tools';
+import { Seo } from '../../components/seo';
 
 // Badge configuration for hero section - only show high priority badges here
 const HERO_BADGE_CONFIG: Record<string, { text: string; className: string; icon?: string }> = {
@@ -22,12 +23,13 @@ const Event = () => {
 	if (!event) {
 		return (
 			<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+				<Seo title="Event Not Found" />
 				<div className='text-center'>
 					<div className='bg-amber-50 border border-amber-200 rounded-2xl p-8'>
 						<h1 className='font-["Fraunces"] text-2xl font-bold text-amber-900 mb-4'>Event Not Found</h1>
 						<p className='text-slate-600 mb-6'>We couldn&apos;t find the event you&apos;re looking for.</p>
 						<Link href='/'>
-							<a className={`inline-flex items-center px-6 py-3 bg-gradient-to-br from-amber-600 
+							<a className={`inline-flex items-center px-6 py-3 bg-gradient-to-br from-amber-600
 								to-orange-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium`}>
 								<ArrowLeft className='w-5 h-5 mr-2' />
 								Back to Timeline
@@ -41,6 +43,13 @@ const Event = () => {
 
 	return (
 		<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+			<Seo
+				title={event.name}
+				description={event.summary}
+				image={event.thumbnail}
+				url={`/event/${event.id}`}
+				type="article"
+			/>
 			{/* Back Button */}
 			<div className='mb-10'>
 				<Link href='/'>
@@ -104,7 +113,7 @@ const Event = () => {
 											{event.companies.map((company: string, index: number) => (
 												<span
 													key={index}
-													className={`px-3 py-2 bg-white text-slate-800 text-sm rounded-lg 
+													className={`px-3 py-2 bg-white text-slate-800 text-sm rounded-lg
 														font-medium border border-slate-200`}>
 													{company}
 												</span>
@@ -121,7 +130,7 @@ const Event = () => {
 											{event.people.map((person: string, index: number) => (
 												<span
 													key={index}
-													className={`px-3 py-2 bg-amber-50 text-amber-900 text-sm rounded-lg 
+													className={`px-3 py-2 bg-amber-50 text-amber-900 text-sm rounded-lg
 														font-medium border border-amber-200`}>
 													{person}
 												</span>
@@ -148,7 +157,7 @@ const Event = () => {
 								{event.labels.map((label: string, index: number) => (
 									<span
 										key={index}
-										className={`px-4 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg 
+										className={`px-4 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg
 											font-medium border border-slate-200`}>
 										{label.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
 									</span>
