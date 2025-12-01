@@ -126,6 +126,10 @@ const Layout = ({ children }: any) => {
 							<span className='w-1 h-1 bg-slate-600 rounded-full'></span>
 							<a href='https://github.com/zvonimirfras/history-of-ui' className='hover:text-amber-500 transition-colors'>Contribute</a>
 							<span className='w-1 h-1 bg-slate-600 rounded-full'></span>
+							<Link href='/privacy-policy'>
+								<a className='hover:text-amber-500 transition-colors'>Privacy Policy</a>
+							</Link>
+							<span className='w-1 h-1 bg-slate-600 rounded-full'></span>
 							<a href='https://www.zvonimirfras.com' className='hover:text-amber-500 transition-colors'>Contact</a>
 						</div>
 						<div className='text-xs text-slate-600'>
