@@ -4,6 +4,7 @@ import { ArrowLeft } from '@carbon/icons-react';
 import { events } from '../../components/events';
 import { prettyDate } from '../../tools';
 import { Seo } from '../../components/seo';
+import { JsonLd } from '../../components/json-ld';
 
 // Badge configuration for hero section - only show high priority badges here
 const HERO_BADGE_CONFIG: Record<string, { text: string; className: string; icon?: string }> = {
@@ -41,6 +42,32 @@ const Event = () => {
 		);
 	}
 
+	const jsonLdData = {
+		'@context': 'https://schema.org',
+		'@type': 'TechArticle',
+		headline: event.name,
+		description: event.summary,
+		image: event.thumbnail ? `https://www.historyofui.com${event.thumbnail}` : undefined,
+		datePublished: event.time,
+		author: {
+			'@type': 'Person',
+			name: 'Zvonimir Fras',
+			url: 'https://www.zvonimirfras.com'
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'History of UI',
+			logo: {
+				'@type': 'ImageObject',
+				url: 'https://www.historyofui.com/favicon.ico'
+			}
+		},
+		about: event.labels.map(label => ({
+			'@type': 'Thing',
+			name: label
+		}))
+	};
+
 	return (
 		<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 			<Seo
@@ -50,6 +77,7 @@ const Event = () => {
 				url={`/event/${event.id}`}
 				type="article"
 			/>
+			<JsonLd data={jsonLdData} />
 			{/* Back Button */}
 			<div className='mb-10'>
 				<Link href='/'>

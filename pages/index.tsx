@@ -4,12 +4,26 @@ import { useRouter } from 'next/router';
 import { useEffect, useState, useMemo } from 'react';
 import { EventTile } from '../components/event-tile';
 import { events, type Label } from '../components/events';
+import { JsonLd } from '../components/json-ld';
 
 const Home: NextPage = () => {
 	const router = useRouter();
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedDecade, setSelectedDecade] = useState('all');
 	const [selectedLabel, setSelectedLabel] = useState('all');
+
+	// Handle initial search from URL query param
+	useEffect(() => {
+		if (!router.isReady) {
+			return;
+		}
+
+		const { q } = router.query;
+		if (q && typeof q === 'string' && q !== searchTerm) {
+			setSearchTerm(q);
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [router.isReady, router.query.q]);
 
 	// decode fresh page load on github pages (from 404.html)
 	useEffect(() => {
@@ -24,6 +38,21 @@ const Home: NextPage = () => {
 			router.push(decoded);
 		}
 	}, [router]);
+
+	const jsonLdData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'The History of User Interfaces',
+		url: 'https://www.historyofui.com',
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: {
+				'@type': 'EntryPoint',
+				urlTemplate: 'https://www.historyofui.com?q={search_term_string}'
+			},
+			'query-input': 'required name=search_term_string'
+		}
+	};
 
 	// Memoized filtered events for performance
 	const filteredEvents = useMemo(() => {
@@ -60,6 +89,7 @@ const Home: NextPage = () => {
 
 	return (
 		<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+			<JsonLd data={jsonLdData} />
 			{/* Search and Filter Controls */}
 			<div className='mb-12'>
 				<div className='bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200/50 overflow-hidden'>
@@ -74,14 +104,14 @@ const Home: NextPage = () => {
 								placeholder='Search by name, company, or person...'
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
-								className={`block w-full pl-12 pr-5 py-4 text-base border-2 border-slate-200 
-									rounded-xl bg-white focus:ring-2 focus:ring-amber-400/50 focus:border-amber-500 
+								className={`block w-full pl-12 pr-5 py-4 text-base border-2 border-slate-200
+									rounded-xl bg-white focus:ring-2 focus:ring-amber-400/50 focus:border-amber-500
 									transition-all duration-200 placeholder:text-slate-400 shadow-sm`}
 							/>
 							{searchTerm && (
 								<button
 									onClick={() => setSearchTerm('')}
-									className={`absolute inset-y-0 right-0 pr-4 flex items-center 
+									className={`absolute inset-y-0 right-0 pr-4 flex items-center
 										text-slate-400 hover:text-slate-600 transition-colors`}
 									aria-label='Clear search'>
 									<svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -124,8 +154,8 @@ const Home: NextPage = () => {
 									<select
 										value={selectedDecade}
 										onChange={(e) => setSelectedDecade(e.target.value)}
-										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
-										border border-slate-200 hover:border-amber-300 hover:bg-amber-50 
+										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600
+										border border-slate-200 hover:border-amber-300 hover:bg-amber-50
 										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
 										{filterOptions.decades.slice(5).map(decade => (
@@ -166,8 +196,8 @@ const Home: NextPage = () => {
 									<select
 										value={selectedLabel}
 										onChange={(e) => setSelectedLabel(e.target.value)}
-										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
-										border border-slate-200 hover:border-slate-300 hover:bg-slate-50 
+										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600
+										border border-slate-200 hover:border-slate-300 hover:bg-slate-50
 										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
 										{filterOptions.labels.slice(3).map(label => (
@@ -203,7 +233,7 @@ const Home: NextPage = () => {
 			{/* Timeline Container */}
 			<div className='relative'>
 				{/* Central Timeline Line */}
-				<div className={`hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full 
+				<div className={`hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full
 					bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700`}></div>
 
 				{/* Mobile Timeline Line */}
@@ -216,19 +246,19 @@ const Home: NextPage = () => {
 						return (
 							<div key={event.id} className='relative flex items-center'>
 								{/* Desktop Timeline Marker - centered vertically */}
-								<div className={`hidden lg:block absolute left-1/2 top-1/2 transform 
+								<div className={`hidden lg:block absolute left-1/2 top-1/2 transform
 									-translate-x-1/2 -translate-y-1/2 z-10`}>
-									<div className={`relative w-5 h-5 bg-gradient-to-br from-amber-500 to-amber-700 
-										rounded-full shadow-lg border-2 border-white group cursor-pointer hover:scale-125 
+									<div className={`relative w-5 h-5 bg-gradient-to-br from-amber-500 to-amber-700
+										rounded-full shadow-lg border-2 border-white group cursor-pointer hover:scale-125
 										transition-transform duration-300`}>
-										<div className={`absolute inset-0 bg-amber-400 rounded-full opacity-0 
+										<div className={`absolute inset-0 bg-amber-400 rounded-full opacity-0
 											group-hover:opacity-50 blur-sm`}></div>
 									</div>
 								</div>
 
 								{/* Mobile Timeline Marker */}
 								<div className='lg:hidden absolute left-6 top-8 transform -translate-x-1/2 z-10'>
-									<div className={`w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700 
+									<div className={`w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700
 										rounded-full shadow-md border-2 border-white`}></div>
 								</div>
 
