@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Modal } from './modal';
 import Link from 'next/link';
 import { events } from './events';
+import Analytics from './analytics';
 
 const Layout = ({ children }: any) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,7 +35,7 @@ const Layout = ({ children }: any) => {
 				<div className='absolute inset-0 bg-gradient-to-b from-amber-100/20 via-transparent to-transparent'></div>
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12'>
 					<div className='text-center'>
-						<div className={`inline-flex items-center px-4 py-2 bg-amber-100/40 backdrop-blur-sm 
+						<div className={`inline-flex items-center px-4 py-2 bg-amber-100/40 backdrop-blur-sm
 							rounded-full border border-amber-200/30 shadow-sm mb-6`}>
 							<svg className='w-4 h-4 mr-2 text-amber-700' fill='currentColor' viewBox='0 0 20 20'>
 								{/* eslint-disable-next-line max-len */}
@@ -53,7 +54,7 @@ const Layout = ({ children }: any) => {
 								</a>
 							</Link>
 						</h1>
-						<p className={`text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed 
+						<p className={`text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed
 							mb-8 font-light`}>
 							{/* eslint-disable-next-line max-len */}
 							From punch cards to touch screens: discover the pivotal moments<br className='hidden md:block' /> that shaped how we interact with technology
@@ -75,7 +76,7 @@ const Layout = ({ children }: any) => {
 							</div>
 						</div>
 						<p className='text-xs text-slate-400 mt-8'>
-							Curated by <a href='https://www.zvonimirfras.com' className={`text-amber-700 
+							Curated by <a href='https://www.zvonimirfras.com' className={`text-amber-700
 								hover:text-amber-900 transition-colors font-medium`}>Zvonimir Fras</a>
 						</p>
 					</div>
@@ -88,8 +89,8 @@ const Layout = ({ children }: any) => {
 
 			{/* Floating Feedback Button */}
 			<button
-				className={`fixed bottom-8 right-8 bg-gradient-to-br from-amber-600 to-orange-700 
-					text-white rounded-full p-4 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 
+				className={`fixed bottom-8 right-8 bg-gradient-to-br from-amber-600 to-orange-700
+					text-white rounded-full p-4 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95
 					transition-all duration-300 z-50 group border border-amber-500/20`}
 				onClick={() => setIsModalOpen(true)}
 				aria-label='Provide feedback'>
@@ -105,6 +106,8 @@ const Layout = ({ children }: any) => {
 					</iframe>
 				</div>
 			</Modal>
+
+			<Analytics />
 
 			{/* Footer */}
 			<footer className='relative bg-slate-900 text-slate-300 py-16 mt-32 border-t border-slate-800'>
