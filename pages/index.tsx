@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect, useState, useMemo } from 'react';
 import { EventTile } from '../components/event-tile';
-import { events } from '../components/events';
+import { events, type Label } from '../components/events';
 
 const Home: NextPage = () => {
 	const router = useRouter();
@@ -21,9 +21,9 @@ const Home: NextPage = () => {
 		}
 		if (l.search[1] === '/') {
 			const decoded = l.search.slice(1).split('&').map((s) => s.replace(/~and~/g, '&')).join('/');
-			router.push(decoded)
+			router.push(decoded);
 		}
-	}, []);
+	}, [router]);
 
 	// Memoized filtered events for performance
 	const filteredEvents = useMemo(() => {
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 			const decade = Math.floor(year / 10) * 10;
 			const matchesDecade = selectedDecade === 'all' || decade.toString() === selectedDecade;
 
-			const matchesLabel = selectedLabel === 'all' || event.labels.includes(selectedLabel);
+			const matchesLabel = selectedLabel === 'all' || event.labels.includes(selectedLabel as Label);
 
 			return matchesSearch && matchesDecade && matchesLabel;
 		}).sort((a, b) => a.time < b.time ? -1 : 1);
