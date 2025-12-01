@@ -68,6 +68,25 @@ const Event = () => {
 		}))
 	};
 
+	const breadcrumbJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Timeline',
+				item: 'https://www.historyofui.com'
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: event.name,
+				item: `https://www.historyofui.com/event/${event.id}`
+			}
+		]
+	};
+
 	return (
 		<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 			<Seo
@@ -78,6 +97,7 @@ const Event = () => {
 				type="article"
 			/>
 			<JsonLd data={jsonLdData} />
+			<JsonLd data={breadcrumbJsonLd} />
 			{/* Back Button */}
 			<div className='mb-10'>
 				<Link href='/'>
