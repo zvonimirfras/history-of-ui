@@ -124,7 +124,7 @@ const Home: NextPage = () => {
 									<select
 										value={selectedDecade}
 										onChange={(e) => setSelectedDecade(e.target.value)}
-									className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
+										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
 										border border-slate-200 hover:border-amber-300 hover:bg-amber-50 
 										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
 									<select
 										value={selectedLabel}
 										onChange={(e) => setSelectedLabel(e.target.value)}
-									className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
+										className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
 										border border-slate-200 hover:border-slate-300 hover:bg-slate-50 
 										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
@@ -227,9 +227,9 @@ const Home: NextPage = () => {
 								</div>
 
 								{/* Mobile Timeline Marker */}
-							<div className='lg:hidden absolute left-6 top-8 transform -translate-x-1/2 z-10'>
-								<div className={`w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700 
-									rounded-full shadow-md border-2 border-white`}></div>
+								<div className='lg:hidden absolute left-6 top-8 transform -translate-x-1/2 z-10'>
+									<div className={`w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700 
+										rounded-full shadow-md border-2 border-white`}></div>
 								</div>
 
 								{/* Event Card - positioned on left or right side */}
