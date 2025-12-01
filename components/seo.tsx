@@ -27,6 +27,7 @@ export const Seo = ({
 			<meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
 			<link rel="icon" href="/favicon.ico" key="favicon" />
 			<link rel="canonical" href={fullUrl} key="canonical" />
+			<link rel="manifest" href="/manifest.json" key="manifest" />
 
 			{/* Open Graph / Facebook */}
 			<meta property="og:type" content={type} key="og:type" />
