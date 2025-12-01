@@ -9,7 +9,7 @@ export const responsive_web_design: Event = {
 	companies: [],
 	people: ['Ethan Marcotte'],
 	labels: ['key-point', 'web'],
-	summary: 'Ethan Marcotte coined &quot;Responsive Web Design,&quot; introducing a methodology for' +
+	summary: 'Ethan Marcotte coined "Responsive Web Design," introducing a methodology for' +
 		'creating websites that adapt fluidly to any screen size, fundamentally changing web' +
 		'development.',
 	description: <>

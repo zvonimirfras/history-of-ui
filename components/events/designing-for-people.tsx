@@ -7,9 +7,9 @@ export const designing_for_people: Event = {
 	companies: [],
 	people: ['Henry Dreyfuss'],
 	labels: ['key-point'],
-	summary: 'Henry Dreyfuss wrote a book called &quot;Designing for people&quot; in which he talked about' +
-		'his ideas related to the relationship between humans and machines, namely &quot;fitting' +
-		'the machine to the man rather than the man to the machine&quot;',
+	summary: 'Henry Dreyfuss wrote a book called "Designing for people" in which he talked about' +
+		'his ideas related to the relationship between humans and machines, namely "fitting' +
+		'the machine to the man rather than the man to the machine"',
 	description: <>
 		<p>Henry Dreyfuss, one of America&apos;s most influential industrial designers, published
 			&quot;Designing for People&quot; in 1955, establishing foundational principles for

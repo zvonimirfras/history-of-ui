@@ -9,7 +9,7 @@ export const hypercard: Event = {
 	companies: ['Apple'],
 	people: ['Bill Atkinson'],
 	labels: ['key-point'],
-	summary: 'Revolutionary hypermedia system that allowed users to create interactive &quot;stacks&quot;' +
+	summary: 'Revolutionary hypermedia system that allowed users to create interactive "stacks"' +
 		'of information with clickable links. HyperCard pioneered concepts that influenced' +
 		'the World Wide Web, interactive multimedia, and modern app development.',
 	description: <>

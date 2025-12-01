@@ -10,9 +10,9 @@ export const user_experience_architect: Event = {
 	people: ['Don Norman'],
 	labels: ['key-point'],
 	// https://www.nngroup.com/articles/definition-user-experience/
-	summary: 'During his time at Apple, Don Norman created the first &quot;User Experience' +
-		'Architect&quot; position. &quot;It&apos;s the way you experience the world, it&apos;s the way you' +
-		'experience your life, it&apos;s the way you experience service.&quot;',
+	summary: 'During his time at Apple, Don Norman created the first "User Experience' +
+		'Architect" position. "It\'s the way you experience the world, it\'s the way you' +
+		'experience your life, it\'s the way you experience service."',
 	description: <>
 		<p><strong>Don Norman</strong>, a cognitive scientist and usability consultant, joined
 			Apple in 1993 and created the position of <strong>&quot;User Experience

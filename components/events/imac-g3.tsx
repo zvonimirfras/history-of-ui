@@ -8,7 +8,7 @@ export const imac_g3: Event = {
 	people: ['Steve Jobs', 'Jonathan Ive'],
 	labels: ['key-point'],
 	summary: 'The iMac was drastically different from other existing mainstream computers. It was' +
-		'made with &quot;nothing-to-hide&quot; translucent plastic.',
+		'made with "nothing-to-hide" translucent plastic.',
 	description: <>
 		<p>The iMac G3, designed by <strong>Jonathan Ive</strong> under Steve Jobs&apos;
 			direction, was the computer that <strong>saved Apple from bankruptcy</strong> and

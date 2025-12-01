@@ -6,7 +6,7 @@ export const windows_95: Event = {
 	name: 'Windows 95',
 	companies: ['Microsoft'],
 	labels: ['key-point', 'operating-system'],
-	summary: 'The most notable was the inclusion of the &quot;START&quot; button which is still present in Windows 10',
+	summary: 'The most notable was the inclusion of the "START" button which is still present in Windows 10',
 	description: <>
 		<p>Windows 95 was a revolutionary operating system that brought Microsoft into the modern
 			GUI era and made Windows the dominant desktop OS.</p>

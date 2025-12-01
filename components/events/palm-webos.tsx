@@ -9,7 +9,7 @@ export const palm_webos: Event = {
 	companies: ['Palm'],
 	people: ['Jon Rubinstein', 'Matias Duarte'],
 	labels: ['key-point', 'mobile', 'smartphone', 'operating-system'],
-	summary: 'Palm webOS introduced the revolutionary &quot;cards&quot; multitasking interface and gesture' +
+	summary: 'Palm webOS introduced the revolutionary "cards" multitasking interface and gesture' +
 		'navigation, pioneering interaction patterns that influenced modern mobile operating' +
 		'systems.',
 	description: <>
