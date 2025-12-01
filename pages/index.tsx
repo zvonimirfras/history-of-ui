@@ -74,12 +74,15 @@ const Home: NextPage = () => {
 								placeholder='Search by name, company, or person...'
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
-								className='block w-full pl-12 pr-5 py-4 text-base border-2 border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-amber-400/50 focus:border-amber-500 transition-all duration-200 placeholder:text-slate-400 shadow-sm'
+								className={`block w-full pl-12 pr-5 py-4 text-base border-2 border-slate-200 
+									rounded-xl bg-white focus:ring-2 focus:ring-amber-400/50 focus:border-amber-500 
+									transition-all duration-200 placeholder:text-slate-400 shadow-sm`}
 							/>
 							{searchTerm && (
 								<button
 									onClick={() => setSearchTerm('')}
-									className='absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600 transition-colors'
+									className={`absolute inset-y-0 right-0 pr-4 flex items-center 
+										text-slate-400 hover:text-slate-600 transition-colors`}
 									aria-label='Clear search'>
 									<svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 										<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
@@ -121,7 +124,9 @@ const Home: NextPage = () => {
 									<select
 										value={selectedDecade}
 										onChange={(e) => setSelectedDecade(e.target.value)}
-										className='px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 border border-slate-200 hover:border-amber-300 hover:bg-amber-50 transition-all duration-200 cursor-pointer'>
+									className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
+										border border-slate-200 hover:border-amber-300 hover:bg-amber-50 
+										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
 										{filterOptions.decades.slice(5).map(decade => (
 											<option key={decade} value={decade.toString()}>
@@ -161,7 +166,9 @@ const Home: NextPage = () => {
 									<select
 										value={selectedLabel}
 										onChange={(e) => setSelectedLabel(e.target.value)}
-										className='px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200 cursor-pointer'>
+									className={`px-3 py-1.5 text-xs font-medium rounded-full bg-white text-slate-600 
+										border border-slate-200 hover:border-slate-300 hover:bg-slate-50 
+										transition-all duration-200 cursor-pointer`}>
 										<option value='all'>More...</option>
 										{filterOptions.labels.slice(3).map(label => (
 											<option key={label} value={label}>
@@ -196,7 +203,8 @@ const Home: NextPage = () => {
 			{/* Timeline Container */}
 			<div className='relative'>
 				{/* Central Timeline Line */}
-				<div className='hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700'></div>
+				<div className={`hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full 
+					bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700`}></div>
 
 				{/* Mobile Timeline Line */}
 				<div className='lg:hidden absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700'></div>
@@ -208,19 +216,26 @@ const Home: NextPage = () => {
 						return (
 							<div key={event.id} className='relative flex items-center'>
 								{/* Desktop Timeline Marker - centered vertically */}
-								<div className='hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
-									<div className='relative w-5 h-5 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full shadow-lg border-2 border-white group cursor-pointer hover:scale-125 transition-transform duration-300'>
-										<div className='absolute inset-0 bg-amber-400 rounded-full opacity-0 group-hover:opacity-50 blur-sm'></div>
+								<div className={`hidden lg:block absolute left-1/2 top-1/2 transform 
+									-translate-x-1/2 -translate-y-1/2 z-10`}>
+									<div className={`relative w-5 h-5 bg-gradient-to-br from-amber-500 to-amber-700 
+										rounded-full shadow-lg border-2 border-white group cursor-pointer hover:scale-125 
+										transition-transform duration-300`}>
+										<div className={`absolute inset-0 bg-amber-400 rounded-full opacity-0 
+											group-hover:opacity-50 blur-sm`}></div>
 									</div>
 								</div>
 
 								{/* Mobile Timeline Marker */}
-								<div className='lg:hidden absolute left-6 top-8 transform -translate-x-1/2 z-10'>
-									<div className='w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full shadow-md border-2 border-white'></div>
+							<div className='lg:hidden absolute left-6 top-8 transform -translate-x-1/2 z-10'>
+								<div className={`w-4 h-4 bg-gradient-to-br from-amber-500 to-amber-700 
+									rounded-full shadow-md border-2 border-white`}></div>
 								</div>
 
 								{/* Event Card - positioned on left or right side */}
-								<div className={`ml-14 lg:ml-0 ${isLeft ? 'lg:w-1/2 lg:pr-16' : 'lg:w-1/2 lg:pl-16 lg:ml-auto'}`}>
+								<div className={`ml-14 lg:ml-0 ${
+									isLeft ? 'lg:w-1/2 lg:pr-16' : 'lg:w-1/2 lg:pl-16 lg:ml-auto'
+								}`}>
 									<div className='animate-fade-in-up' style={{ animationDelay: `${index * 50}ms` }}>
 										<EventTile event={event} side={isLeft ? 'left' : 'right'} />
 									</div>
